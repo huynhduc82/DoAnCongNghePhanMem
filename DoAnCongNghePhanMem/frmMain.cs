@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+using System.Runtime.InteropServices;
 
 namespace DoAnCongNghePhanMem
 {
@@ -21,6 +22,11 @@ namespace DoAnCongNghePhanMem
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
+
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
         private struct RGBColors
         {
@@ -42,22 +48,25 @@ namespace DoAnCongNghePhanMem
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = color;
                 currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
-                currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
+                currentBtn.ImageAlign = ContentAlignment.MiddleRight;
 
                 leftBorderBtn.BackColor = color;
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
+
+                currentBut.IconChar = currentBtn.IconChar;
+                currentBut.IconColor = color;
             }    
         }
         private void DisableButton()
         {
             if(currentBtn!=null)
             {
-                currentBtn.BackColor = Color.FromArgb(252, 199, 199);
-                currentBtn.ForeColor = Color.MediumSeaGreen;
+                currentBtn.BackColor = Color.FromArgb(31, 30, 68);
+                currentBtn.ForeColor = Color.White;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
-                currentBtn.IconColor = Color.MediumSeaGreen;
+                currentBtn.IconColor = Color.Black;
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
@@ -66,6 +75,55 @@ namespace DoAnCongNghePhanMem
         private void btnHocVien_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color2);
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color3);
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color4);
+        }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color5);
+        }
+
+        private void iconButton6_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color6);
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }
+        private void Reset()
+        {
+            DisableButton();
+            leftBorderBtn.Visible = false;
+            currentBut.IconChar = IconChar.Home;
+            currentBut.IconColor = Color.MediumPurple;
+            lblTitle.Text = "Home";
+        }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWind, int wMsg, int wParam, int lParam);
+
+        private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }
