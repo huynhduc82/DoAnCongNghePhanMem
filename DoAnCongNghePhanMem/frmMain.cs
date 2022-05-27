@@ -93,37 +93,6 @@ namespace DoAnCongNghePhanMem
             ActivateButton(sender, RGBColors.color1);
             OpenChildForm(new frmHocVien());
         }
-
-        private void iconButton2_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color2);
-            OpenChildForm(new frmHocVien());
-        }
-
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color3);
-            OpenChildForm(new frmHocVien());
-        }
-
-        private void iconButton4_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color4);
-            OpenChildForm(new frmHocVien());
-        }
-
-        private void iconButton5_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color5);
-            OpenChildForm(new frmHocVien());
-        }
-
-        private void iconButton6_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color6);
-            OpenChildForm(new frmHocVien());
-        }
-
         private void btnHome_Click(object sender, EventArgs e)
         {
             currentChildForm.Close();
@@ -188,6 +157,12 @@ namespace DoAnCongNghePhanMem
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void btnGiaoVien_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color6);
+            OpenChildForm(new frmGiaoVien());
         }
     }
 }

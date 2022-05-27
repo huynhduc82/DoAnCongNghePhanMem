@@ -200,7 +200,6 @@ namespace DoAnCongNghePhanMem
             this.btnDangKiKhoaHoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDangKiKhoaHoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDangKiKhoaHoc.UseVisualStyleBackColor = true;
-            this.btnDangKiKhoaHoc.Click += new System.EventHandler(this.iconButton6_Click);
             // 
             // btnPhong
             // 
@@ -223,7 +222,6 @@ namespace DoAnCongNghePhanMem
             this.btnPhong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPhong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPhong.UseVisualStyleBackColor = true;
-            this.btnPhong.Click += new System.EventHandler(this.iconButton5_Click);
             // 
             // btnKhoa
             // 
@@ -246,7 +244,6 @@ namespace DoAnCongNghePhanMem
             this.btnKhoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKhoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnKhoa.UseVisualStyleBackColor = true;
-            this.btnKhoa.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // btnLop
             // 
@@ -269,7 +266,6 @@ namespace DoAnCongNghePhanMem
             this.btnLop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLop.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLop.UseVisualStyleBackColor = true;
-            this.btnLop.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // btnGiaoVien
             // 
@@ -292,7 +288,7 @@ namespace DoAnCongNghePhanMem
             this.btnGiaoVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGiaoVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGiaoVien.UseVisualStyleBackColor = true;
-            this.btnGiaoVien.Click += new System.EventHandler(this.iconButton2_Click);
+            this.btnGiaoVien.Click += new System.EventHandler(this.btnGiaoVien_Click);
             // 
             // btnHocVien
             // 
@@ -408,7 +404,7 @@ namespace DoAnCongNghePhanMem
             this.currentBut.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.currentBut.IconColor = System.Drawing.Color.MediumPurple;
             this.currentBut.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.currentBut.Location = new System.Drawing.Point(21, 11);
+            this.currentBut.Location = new System.Drawing.Point(21, 21);
             this.currentBut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.currentBut.Name = "currentBut";
             this.currentBut.Size = new System.Drawing.Size(48, 50);
