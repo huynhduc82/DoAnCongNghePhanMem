@@ -16,6 +16,7 @@ namespace DoAnCongNghePhanMem
     {
         private IconButton currentBtn;
         private Panel leftBorderBtn;
+        private Form currentChildForm;
         public frmMain()
         {
             InitializeComponent();
@@ -71,10 +72,26 @@ namespace DoAnCongNghePhanMem
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
-
+        private void OpenChildForm(Form childForm)
+        {
+            if(currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(childForm);
+            panelDesktop.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            lblTitle.Text = childForm.Text;
+        }
         private void btnHocVien_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
+            OpenChildForm(new frmHocVien());
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
@@ -104,6 +121,7 @@ namespace DoAnCongNghePhanMem
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+            currentChildForm.Close();
             Reset();
         }
         private void Reset()
@@ -124,6 +142,24 @@ namespace DoAnCongNghePhanMem
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                WindowState = FormWindowState.Maximized;
+            else
+                WindowState = FormWindowState.Normal;
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }
