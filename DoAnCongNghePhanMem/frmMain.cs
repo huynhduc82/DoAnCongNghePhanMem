@@ -139,13 +139,13 @@ namespace DoAnCongNghePhanMem
         private void btnThoiKhoaBieu_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
-            OpenChildForm(new frmHocVien());
+            OpenChildForm(new frmThoiKhoaBieu());
         }
 
         private void btnDiem_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color6);
-            OpenChildForm(new frmHocVien());
+            OpenChildForm(new frmDiem());
         }
 
         private void btnTaiKhoan_Click(object sender, EventArgs e)
@@ -163,6 +163,24 @@ namespace DoAnCongNghePhanMem
         {
             ActivateButton(sender, RGBColors.color6);
             OpenChildForm(new frmGiaoVien());
+        }
+
+        private void btnLop_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color6);
+            OpenChildForm(new frmLop());
+        }
+
+        private void btnKhoa_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color6);
+            OpenChildForm(new frmKhoaHoc());
+        }
+
+        private void btnPhong_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color6);
+            OpenChildForm(new frmPhong());
         }
     }
 }

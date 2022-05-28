@@ -64,12 +64,12 @@ namespace DoAnCongNghePhanMem
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grvHocVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grvHocVien.Location = new System.Drawing.Point(494, 25);
+            this.grvHocVien.Location = new System.Drawing.Point(515, 25);
             this.grvHocVien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grvHocVien.Name = "grvHocVien";
             this.grvHocVien.RowHeadersWidth = 51;
             this.grvHocVien.RowTemplate.Height = 24;
-            this.grvHocVien.Size = new System.Drawing.Size(662, 361);
+            this.grvHocVien.Size = new System.Drawing.Size(641, 361);
             this.grvHocVien.TabIndex = 0;
             // 
             // btnThemMoi
@@ -96,17 +96,17 @@ namespace DoAnCongNghePhanMem
             // txtMaHV
             // 
             this.txtMaHV.Location = new System.Drawing.Point(171, 25);
-            this.txtMaHV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaHV.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaHV.Name = "txtMaHV";
-            this.txtMaHV.Size = new System.Drawing.Size(294, 31);
+            this.txtMaHV.Size = new System.Drawing.Size(323, 31);
             this.txtMaHV.TabIndex = 3;
             // 
             // txtTinhTrang
             // 
             this.txtTinhTrang.Location = new System.Drawing.Point(171, 355);
-            this.txtTinhTrang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTinhTrang.Margin = new System.Windows.Forms.Padding(4);
             this.txtTinhTrang.Name = "txtTinhTrang";
-            this.txtTinhTrang.Size = new System.Drawing.Size(294, 31);
+            this.txtTinhTrang.Size = new System.Drawing.Size(323, 31);
             this.txtTinhTrang.TabIndex = 5;
             // 
             // label2
@@ -122,9 +122,9 @@ namespace DoAnCongNghePhanMem
             // txtNgheNghiep
             // 
             this.txtNgheNghiep.Location = new System.Drawing.Point(171, 308);
-            this.txtNgheNghiep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNgheNghiep.Margin = new System.Windows.Forms.Padding(4);
             this.txtNgheNghiep.Name = "txtNgheNghiep";
-            this.txtNgheNghiep.Size = new System.Drawing.Size(294, 31);
+            this.txtNgheNghiep.Size = new System.Drawing.Size(323, 31);
             this.txtNgheNghiep.TabIndex = 7;
             // 
             // label3
@@ -140,9 +140,9 @@ namespace DoAnCongNghePhanMem
             // txtDiaChi
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(171, 261);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(294, 31);
+            this.txtDiaChi.Size = new System.Drawing.Size(323, 31);
             this.txtDiaChi.TabIndex = 9;
             // 
             // label4
@@ -158,9 +158,9 @@ namespace DoAnCongNghePhanMem
             // txtMaLop
             // 
             this.txtMaLop.Location = new System.Drawing.Point(171, 72);
-            this.txtMaLop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaLop.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaLop.Name = "txtMaLop";
-            this.txtMaLop.Size = new System.Drawing.Size(294, 31);
+            this.txtMaLop.Size = new System.Drawing.Size(323, 31);
             this.txtMaLop.TabIndex = 11;
             // 
             // label5
@@ -176,9 +176,9 @@ namespace DoAnCongNghePhanMem
             // txtTenHV
             // 
             this.txtTenHV.Location = new System.Drawing.Point(171, 119);
-            this.txtTenHV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenHV.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenHV.Name = "txtTenHV";
-            this.txtTenHV.Size = new System.Drawing.Size(294, 31);
+            this.txtTenHV.Size = new System.Drawing.Size(323, 31);
             this.txtTenHV.TabIndex = 13;
             // 
             // label6
@@ -204,9 +204,9 @@ namespace DoAnCongNghePhanMem
             // txtGioiTinh
             // 
             this.txtGioiTinh.Location = new System.Drawing.Point(171, 214);
-            this.txtGioiTinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGioiTinh.Margin = new System.Windows.Forms.Padding(4);
             this.txtGioiTinh.Name = "txtGioiTinh";
-            this.txtGioiTinh.Size = new System.Drawing.Size(294, 31);
+            this.txtGioiTinh.Size = new System.Drawing.Size(323, 31);
             this.txtGioiTinh.TabIndex = 17;
             // 
             // label8
@@ -311,7 +311,7 @@ namespace DoAnCongNghePhanMem
             // 
             this.dNgaySinh.Location = new System.Drawing.Point(171, 166);
             this.dNgaySinh.Name = "dNgaySinh";
-            this.dNgaySinh.Size = new System.Drawing.Size(294, 31);
+            this.dNgaySinh.Size = new System.Drawing.Size(323, 31);
             this.dNgaySinh.TabIndex = 21;
             // 
             // frmHocVien
